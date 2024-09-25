@@ -1,32 +1,41 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 
 import java.util.Scanner;
-public class Main {
+class Main{
     public static void main(String[] args) {
-//        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-//        // to see how IntelliJ IDEA suggests fixing it.
-//        System.out.printf("Hello and welcome!");
-//
-//        for (int i = 1; i <= 5; i++) {
-//            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-//            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-//            System.out.println("i = " + i);
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the name:");
+        String a=sc.next();
+
+
+        //ENHANCED SWITCH STATEMENT
+
+
+//        switch (a) {
+//            case "Azad"->System.out.println("Head of Khan Family");
+//            case "Aslam"-> System.out.println("Second head of khan family");
+//            case "Manu"->System.out.println("Elder Daughter of khan Family");
+//            case "Sanu"->System.out.println("Khan family daughter studied in marwadi university");
+//            default->System.out.println("Not belongs to khans family");
 //        }
 
-        //while Loop
-//        int a=1;
-//        while(a<=10){
-//            System.out.println(a*10);
-//            a += 1;
-//        }
 
-        //do while loop
-        int b=10;
-        do{
-            System.out.println(b);
-            b+=1;
-        }while(b<=15);
+        //BASIC SWITCH STATEMENT
+            switch (a) {
+                case "Azad":
+                    System.out.println("Head of Khan Family");
+                    break;
+                case "Aslam":
+                    System.out.println("Second head of khan family");
+                    break;
+                case "Manu":
+                    System.out.println("Elder Daughter of khan Family");
+                    break;
+                case "Sanu":
+                    System.out.println("Khan family daughter studied in marwadi university");
+                    break;
+                default:
+                    System.out.println("Not belongs to khans family");
+            }
 
     }
 }
