@@ -1,0 +1,31 @@
+import java.util.*;
+public class TakeInput {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the size of array:");
+        int n=sc.nextInt();
+        //initializing and declare the array
+        int [] arr=new int[n];
+        System.out.println("Enter the element in array:");
+        int i=0;
+        while( i<n){
+            arr[i]=sc.nextInt();
+            i+=1;
+        }
+        System.out.println("The give array is:");
+        //using for each loop
+//        for(int a: arr){
+//            System.out.println(a + " ");
+//        }
+
+        //using ToString method
+        System.out.println(Arrays.toString(arr));
+
+        //using while loop
+//        int j=0;
+//        while( j<n){
+//            System.out.println(arr[j] + " ");
+//            j+=1;
+//        }
+    }
+}
