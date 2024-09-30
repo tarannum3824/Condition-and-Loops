@@ -1,0 +1,33 @@
+import java.util.*;
+public class SearchInRange {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the size of array:");
+        int n=sc.nextInt();
+        int [] array=new int[n];
+        System.out.println("Enter the element in array:");
+        for(int i=0;i<n;i++){
+            array[i]=sc.nextInt();
+        }
+        System.out.println(Arrays.toString(array));
+        System.out.println("Enter the index from where you start:");
+        int start=sc.nextInt();
+        System.out.println("Enter the index upto where serach:");
+        int end=sc.nextInt();
+        System.out.println("Enter the target value you want to search:");
+        int target=sc.nextInt();
+        System.out.println(searchInRange(array,target,start,end));
+    }
+
+    private static int searchInRange(int[] array,int target,int start,int end) {
+        if(array.length==0){
+            return -1;
+        }
+        for(int i=start;i<=end;i++){
+            if(array[i]==target){
+                return i;
+            }
+        }
+        return -1;
+    }
+}
