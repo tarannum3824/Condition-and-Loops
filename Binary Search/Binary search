@@ -1,0 +1,27 @@
+import java.util.Arrays;
+class main{
+    public static void main(String [] args){
+        int [] arr={23,54,67,38,21,89,76,59,35,34,5,6,7,8};
+        Arrays.sort(arr);
+        System.out.println(Arrays.toString(arr));
+        
+        //binary search
+        int target=76;
+        int n=arr.length;
+        int middle=n/2;
+        if(target>arr[middle]){
+            for(int i=middle;i<n;i++){
+               if( arr[i]==target){
+                   return i;
+               }
+            }
+        }else{
+            for(int i=0;i<middle;i++){
+                if(arr[i]==target){
+                    return i;
+                }
+            }
+        }
+        
+    }
+}
