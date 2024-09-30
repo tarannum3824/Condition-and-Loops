@@ -1,0 +1,43 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class SearchingMaximumElementIn2DArray {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Input for 2D array dimensions
+        System.out.println("Enter the number of rows in the 2D array:");
+        int row = sc.nextInt();
+        System.out.println("Enter the number of columns in the 2D array:");
+        int col = sc.nextInt();
+
+        // Initializing and filling the 2D array
+        int[][] array = new int[row][col];
+        System.out.println("Enter the elements of the 2D array:");
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                array[i][j] = sc.nextInt();
+            }
+        }
+
+        // Display the entered 2D array
+        System.out.println("The 2D array is: " + Arrays.deepToString(array));
+        
+        // Find the maximum element and display it
+        int maxElement = found(array);
+        System.out.println("The maximum element in the 2D array is: " + maxElement);
+    }
+
+    // Method to find the maximum element in a 2D array
+    static int found(int[][] arr) {
+        int max = Integer.MIN_VALUE; // Initialize to the smallest possible integer
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] > max) {
+                    max = arr[i][j]; // Update max if a larger element is found
+                }
+            }
+        }
+        return max; // Return the maximum element found
+    }
+}
