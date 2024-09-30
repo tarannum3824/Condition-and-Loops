@@ -1,0 +1,40 @@
+import java.util.*;
+public class Searching2DArray {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the row in 2d array:");
+        int row=sc.nextInt();
+        System.out.println("Enter the column in 2D array:");
+        int col=sc.nextInt();
+
+        int [][] array=new int[row][col];
+        System.out.println("Enter the element in 2D array:");
+        for(int i=0;i<row;i++){
+            for(int j=0;j<col;j++){
+                array[i][j]=sc.nextInt();
+            }
+        }
+        System.out.println("The 2D array is:" + Arrays.deepToString(array));
+        System.out.println("Enter the target Element:");
+        int target=sc.nextInt();
+
+
+        int[] result = found(array, target);
+        if (result[0] != -1) {
+            System.out.println("Element found at index: " + Arrays.toString(result));
+        } else {
+            System.out.println("Element not found.");
+        }
+    }
+
+    static int[] found(int [][] arr,int a){
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j<arr[i].length;j++){
+                if(arr[i][j]==a){
+                    return new int[]{i,j};
+                }
+            }
+        }
+        return new int[]{-1,-1};
+    }
+}
