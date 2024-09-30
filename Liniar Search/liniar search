@@ -1,0 +1,14 @@
+class Main{
+    public static void main(String[] args) {
+        int [] arr={76,34,23,12,65,78,34,2,5};
+        int var=65;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]==var){
+                System.out.println(arr[i]);
+            }
+        }
+    }
+}
+
+
+//outuput:4
