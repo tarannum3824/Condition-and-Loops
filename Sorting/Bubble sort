@@ -1,0 +1,22 @@
+import java.util.Arrays;
+
+class Bubble{
+    public static void main(String[] args) {
+        int [] array={67,342,123,89,65,90};
+        bubble(array);
+        System.out.println(Arrays.toString(array));
+    }
+    static void bubble(int [] arr){
+        //run the steps upto n-1 times
+        for(int i=0;i<arr.length;i++){
+            //in every step, mx element will be at last with respective index
+            for(int j=1;j<arr.length-i;j++){
+                if(arr[j]<arr[j-1]){
+                    int temp=arr[j];
+                    arr[j]=arr[j-1];
+                    arr[j-1]=temp;
+                }
+            }
+        }
+    }
+}
